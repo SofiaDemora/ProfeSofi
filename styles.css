@@ -1,4 +1,7 @@
-/* Submenú inicialmente oculto */
+html {cursor: url("cursorm.png") , auto;}
+    /* The image is from unsplash by David van Dijk */
+
+html:active {cursor: url("cursoralt.png") , auto;}/* Submenú inicialmente oculto */
 .submenu {
     display: none;
     list-style-type: none; /* Esto elimina el círculo */
