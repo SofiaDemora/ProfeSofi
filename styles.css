@@ -12,7 +12,6 @@ html:active {cursor: url("cursoralt.png") , auto;}/* Submenú inicialmente ocult
     text-align: left;
     position: absolute;
     top: 100%; /* Esto asegura que el submenú aparezca justo debajo del elemento de navegación */
-    
 }
 
 .submenu li{ 
@@ -190,6 +189,7 @@ h3{
     white-space: normal;
     overflow-wrap: break-word;
     margin-left: 5%;
+    list-style-image: url('señaladorlibro.png');
 }
 
 
