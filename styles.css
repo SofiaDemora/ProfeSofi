@@ -132,7 +132,6 @@ body{
 }
 
 header{
-    margin-top:70px;
     background: #B2D5CD;
     text-align: center;
     padding: 1%;
@@ -152,7 +151,6 @@ header{
 }
 
 aside{
-    margin-top:70px;
     height: 100%;
     width: 16%;
     right:1%;
