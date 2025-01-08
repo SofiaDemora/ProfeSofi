@@ -2,17 +2,17 @@ html {cursor: url("cursorm.png") , auto;}
     /* The image is from unsplash by David van Dijk */
 
 html:active {cursor: url("cursoralt.png") , auto;}/* Submenú inicialmente oculto */
+
 .submenu {
     display: none;
     list-style-type: none; /* Esto elimina el círculo */
     background-color: #b2d5cd;
-    position: relative;
     padding: 0px;
-    left: 25%;
     white-space: nowrap ;
     text-align: left;
-    margin-top: 3.7%;
-    min-width: 110%;
+    position: absolute;
+    top: 100%; /* Esto asegura que el submenú aparezca justo debajo del elemento de navegación */
+    
 }
 
 .submenu li{ 
@@ -52,6 +52,7 @@ body{
     border-radius: 2px;
     background: #B2D5CD;
     display: flex;
+    z-index: 3;
 }
 
 .logo{
@@ -158,6 +159,7 @@ aside{
     font-family: "Rubik", serif;
     font-weight: 400;
     position: fixed;
+    z-index: 2;
 }
 
 
