@@ -65,11 +65,14 @@ body{
     font-family: "Monsieur La Doulaise", serif;
     font-size: 38px;
 }
+
 .logo a{
     color: black;
     text-decoration: none;
 }
-
+.logo a:hover{
+    cursor: url("cursoralt.png") , auto;
+}
 .nav-menu{
     width:70%;
     display: flex;
@@ -201,6 +204,12 @@ h3{
     background-size: cover;  /* Asegura que la imagen se ajuste al tamaño */
     background-repeat: no-repeat;
     margin-right: 10px;  /* Espaciado entre el marcador y el contenido */
+    
+}
+
+.h44:hover {
+    color: #5EA697;        /*cambia el color al pasar el ratón*/
+    cursor: url("cursoralt.png") , auto;
 }
 
 .unidad1{
