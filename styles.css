@@ -189,9 +189,19 @@ h3{
     white-space: normal;
     overflow-wrap: break-word;
     margin-left: 5%;
-    list-style-image: url('señaladorlibro.png');
+    list-style-type: none;
 }
 
+.h44::before {
+    content: "";  /* Necesario para que el pseudo-elemento se vea */
+    display: inline-block;
+    width: 20px;  /* Ancho del marcador */
+    height: 20px; /* Alto del marcador */
+    background-image: url('señaladorlibro.png');
+    background-size: cover;  /* Asegura que la imagen se ajuste al tamaño */
+    background-repeat: no-repeat;
+    margin-right: 10px;  /* Espaciado entre el marcador y el contenido */
+}
 
 .unidad1{
     font-family: "Rubik", serif;
