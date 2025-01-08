@@ -25,6 +25,7 @@ html:active {cursor: url("cursoralt.png") , auto;}/* Submenú inicialmente ocult
 	
 }
 
+
 label {
     cursor: pointer;
     font-weight: bold;
@@ -108,17 +109,27 @@ body{
     
 	header{
 	    font-size:large;
+        margin-top: 10%;
 	}
-  
+    
+    aside{
+        margin-top: 10%;
+    }
 }
 
 #fle{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1%;
+}
+
+#cont{
+    width: 82.5%;
 }
 
 header{
     margin-top:70px;
-    width: 98%; 
     background: #B2D5CD;
     text-align: center;
     padding: 1%;
@@ -139,13 +150,14 @@ header{
 
 aside{
     margin-top:70px;
-    width: 300px;
     height: 100%;
-    margin-left: 1%;
+    width: 16%;
+    right:1%;
     background-color: #B2D5CD;
     text-align: center;
     font-family: "Rubik", serif;
     font-weight: 400;
+    position: fixed;
 }
 
 
