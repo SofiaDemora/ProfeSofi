@@ -52,6 +52,7 @@ body{
     background: #B2D5CD;
     display: flex;
     z-index: 3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo{
@@ -135,6 +136,7 @@ header{
     background: #B2D5CD;
     text-align: center;
     padding: 1%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #header{
@@ -148,6 +150,7 @@ header{
     color: #620808;
     font-family: "Rubik", serif;
     font-size: medium;
+    
 }
 
 aside{
@@ -160,6 +163,7 @@ aside{
     font-weight: 400;
     position: fixed;
     z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 
