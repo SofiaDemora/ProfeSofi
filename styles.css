@@ -1,7 +1,7 @@
-html {cursor: url("cursorm.png") , auto;}
+html {cursor: url("recursos/cursorm.png") , auto;}
     /* The image is from unsplash by David van Dijk */
 
-html:active {cursor: url("cursoralt.png") , auto;}/* Submenú inicialmente oculto */
+html:active {cursor: url("recursos/cursoralt.png") , auto;}/* Submenú inicialmente oculto */
 
 .submenu {
     display: none;
