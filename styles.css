@@ -202,7 +202,7 @@ h3{
     display: inline-block;
     width: 20px;  /* Ancho del marcador */
     height: 20px; /* Alto del marcador */
-    background-image: url('señaladorlibro.png');
+    background-image: url('recursos/señaladorlibro.png');
     background-size: cover;  /* Asegura que la imagen se ajuste al tamaño */
     background-repeat: no-repeat;
     margin-right: 10px;  /* Espaciado entre el marcador y el contenido */
