@@ -48,22 +48,30 @@ label{
     font-weight: bold;
 }
 
-details summary{
+/* details summary{
     line-height:0;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 details {
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+    border-left: 3cm;
+    padding: 10px;
+    border-radius: 5px;
     line-height:1.2;
     white-space: normal;
     overflow-wrap: break-word;
-}
+} */
 
 body{
     background-color: #CCE3DE;
 }
 .navegador{
     position: fixed;
-    width: 98.5%;
+    width: 98vw;
+    height: 8vh;
     border-radius: 2px;
     background: #B2D5CD;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -100,7 +108,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
+    width: 60vw;
 }
 
 .option a{
@@ -131,14 +139,89 @@ body{
     color: #5EA697;        /*cambia el color al pasar el ratón*/
     cursor: url("cursoralt.png") , auto;
 }
-/* @media (max-width: 1000px) {
-    .logo{
-        margin-top: 35px;
-      }
+
+.hamburger-menu{
+    display: none;
+}
+@media (max-width: 1000px) {
+    .navegador{
+        position: fixed;
+        height: fit-content;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        left:auto !important; 
+        right: 2vw !important;
+        top: 35px !important;
+    }
+
+    .hamburger-menu input {
+        display: none; /* Ocultamos el checkbox real */
+    }
+    .hamburger-menu span,
+    .hamburger-menu span::before,
+    .hamburger-menu span::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    }
+
+    /* Posición inicial de las líneas */
+    .hamburger-menu span {
+    position: relative;
+    }
+
+    .hamburger-menu span::before {
+    position: absolute;
+    top: -8px;
+    }
+
+    .hamburger-menu span::after {
+    position: absolute;
+    bottom: -8px;
+    }
+
+    /* Animación al hacer clic (X) */
+    .hamburger-menu.active span {
+    background-color: transparent; /* Oculta la línea del medio */
+    }
+
+    .hamburger-menu.active span::before {
+    transform: rotate(45deg);
+    top: 0;
+    }
+
+    .hamburger-menu.active span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+    }
+
     .nav-menu{
-        flex-direction: column; /* Cambia a vertical 
-        text-align: left;
-        width: 100%;            /* Ocupa todo el ancho 
+        display: none;
+        flex-direction: column; /* Cambia a vertical */
+        margin-left: auto;
+        align-items: flex-end;
+        width: 100%
+    }
+
+    #bNav{
+        width: fit-content;
+    }
+    .nav-menu.active{
+        display: flex;
+        margin-right: 0vw;
     }
     
 	header{
@@ -149,61 +232,113 @@ body{
     aside{
         margin-top: 12%;
     }
-} */
+}
 
-#fle{
+/* #fle{
     display: flex;
     width: 100%;
     justify-content: space-between;
     gap: 1%;   
-    padding-top: 10%;
-}
+} */
 
 #cont{
-    width: 82.5%;
-    position: -webkit-sticky;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw; /* Separación entre el contenido principal y el aside */
+    align-items: flex-start; /* O de-flex-start para alinearlos arriba */
 }
 
 header{
-    background: #B2D5CD;
     text-align: center;
+    font-family: "Rubik", serif;
+    font-size: small;
     padding: 1%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #header{
-    justify-content: center;
-    font-family: "Rubik", serif;
-    font-size: x-large;
-    font-weight:500;
+    font-weight: 300;
 }
 
 #mje{
     color: #620808;
     font-family: "Rubik", serif;
     font-size: medium;
-    
+}
+#columna1{
+    margin-top: 13vh;
+    width: 81vw; 
+    height: 87vh;
+    background-color: #B2D5CD;
+    border-radius: 10px;
+}
+#columna2 {
+    width: 16vw;
+    height: 87vh;
+    margin-top: 13vh;
+    overflow-y: auto;
+    background-color: #B2D5CD;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    border-radius: 10px;
 }
 
-aside{
-    height: 100%;
-    width: 16%;
-    right:1%;
-    background-color: #B2D5CD;
+aside{ 
     text-align: center;
     font-family: "Rubik", serif;
     font-weight: 400;
-    position: fixed;
-    z-index: 2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 
 #cuerpo{
     width: 100%;
-    height: 100%;
     text-align: center;
     background-color: #b2d5cd;
+}
+
+
+
+.acordeon-contenedor {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.acordeon-item {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Ocultamos el checkbox original */
+.acordeon-input {
+  display: none;
+}
+
+/* Estilo del título (lo que hace clic el usuario) */
+.acordeon-titulo {
+    background-image: url('recursos/señaladorlibro.png');
+  display: block;
+  padding: 15px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.acordeon-titulo:hover {
+  background-color: #e7e7e7;
+}
+
+/* Estilo del contenido (inicialmente oculto) */
+.acordeon-contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  background-color: #fff;
+}
+
+/* Cuando el checkbox está seleccionado (marcado), el contenido se despliega */
+.acordeon-input:checked ~ .acordeon-contenido {
+  max-height: 200px; /* Asegúrate de que este número sea mayor que la altura de tu contenido */
+  padding: 15px;
 }
 
 h2{
@@ -230,12 +365,11 @@ h3{
     list-style-type: none;
 }
 
-.h44::before {
+label::before {
     content: "";  /* Necesario para que el pseudo-elemento se vea */
     display: inline-block;
     width: 20px;  /* Ancho del marcador */
     height: 20px; /* Alto del marcador */
-    background-image: url('recursos/señaladorlibro.png');
     background-size: cover;  /* Asegura que la imagen se ajuste al tamaño */
     background-repeat: no-repeat;
     margin-right: 10px;  /* Espaciado entre el marcador y el contenido */
@@ -273,4 +407,9 @@ h3{
     font-size: medium;
     padding: 8px;
     text-align:left;
+}
+
+
+#OctavoAño{
+    margin-top: -2%;
 }

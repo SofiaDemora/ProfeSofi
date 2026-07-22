@@ -27,6 +27,7 @@
 <body id="top">
   <nav class="navegador">
     <div id="logo"><a href="#top"> Sofía Demora</a></div>
+    
     <div class="nav-menu">
       <button class="bNav" type="menu" onclick="location.href='index.html'">Inicio</button>      
       
@@ -108,23 +109,64 @@
         <li><a href="#section3">Material extra</a></li>
       -->
     </div>
+    <div class="hamburger-menu" id = "btn-hamburger">
+      <input type="checkbox" id="check-menu"/>
+      <span></span>
+    </div>
   </nav>
 
-      <div id="fle">
-        <div id="cont">
-          <header>
-              <h1 id="header">Una página para acercar el contenido, las herramientas, y la computación a mis alumnos.</h1>
-              <p id="mje"><strong>Estamos en construcción.</strong></p>
-          </header>
-          <div id="cuerpo"></div>
-        </div>
-        <aside>
-          <h2>¿Sabías que también puedes crear tu propia página web?</h2>
-          <p>Si eres de noveno grado, a finales de este año tendrás tu propia página web, diseñada desde cero por ti.En cambio, si eres de octavo grado, deberás ser paciente hasta el próximo año.</p>
-        </aside>
+      
+  <div id="cont">
+    <div id="columna1">
+      <header>
+          <h1 id="header">Una página para acercar el contenido, las herramientas, y la computación a mis alumnos.</h1>
+          <p id="mje"><strong>Estamos en construcción.</strong></p>
+      </header>
+
+      <div id="cuerpo">hola</div>
     </div>
+    <div id="columna2">
+      <aside>
+        <h2>¿Sabías que también puedes crear tu propia página web?</h2>
+        <p>Si eres de noveno grado, a finales de este año tendrás tu propia página web, diseñada desde cero por ti.En cambio, si eres de octavo grado, deberás ser paciente hasta el próximo año.</p>
+      </aside>
+    </div>
+  </div>
     
-    <script src="script.js"></script>
+  <script src="script.js"></script>
+  
+  <script>
+    function ajustarEspacio() {
+      // 1. Obtenemos el menú y el contenedor
+      const nav = document.querySelector('.navegador');
+      const cont = document.getElementById('cont');
+      const columna1 = document.getElementById('columna1');
+      const columna2 = document.getElementById('columna2');
+      
+      // 2. Medimos la altura real del menú en píxeles
+      const altoMenu = nav.offsetHeight;
+      
+      // 3. Se la aplicamos a #cont dinámicamente
+      columna1.style.marginTop = altoMenu + 10 + 'px';
+      columna2.style.marginTop = altoMenu + 10 +'px';
+      cont.style.top = altoMenu + 'px';       // Freno para el sticky
+    }
+
+    // Ejecutar al cargar la página
+    window.addEventListener('load', ajustarEspacio);
+    
+    // Reorganizar si la ventana cambia de tamaño
+    window.addEventListener('resize', ajustarEspacio);
+   
+    const burger = document.querySelector('.hamburger-menu');
+    const menu = document.querySelector('.nav-menu');
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active'); // Activa la animación a X
+        menu.classList.toggle('active');   // Muestra/oculta el menú
+    });
+
+  </script>
 </body>
 
 </html>
