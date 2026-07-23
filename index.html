@@ -151,13 +151,13 @@
       columna1.style.marginTop = altoMenu + 10 + 'px';
       columna2.style.marginTop = altoMenu + 10 +'px';
       cont.style.top = altoMenu + 'px';       // Freno para el sticky
+      window.addEventListener('load', () => {
+        const logo = document.getElementById('logo');
+        const navM = document.getElementById('nav-menu');
 
-      const logo = document.getElementById('logo');
-      const navM = document.getElementById('nav-menu');
-
-      const largoLogo = logo.offsetWidth;
-      navM.style.width = `calc(98vw - ${largoLogo}px)`;
-
+        const largoLogo = logo.offsetWidth;
+        navM.style.width = `calc(98vw - ${largoLogo}px)`;
+      });
     }
 
     // Ejecutar al cargar la página
